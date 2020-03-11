@@ -1,21 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 import STORE from './STORE'
-import Folders from '/Folders'
-import Notes from './Notes'
+import Folderlist from './Folderslist'
+import Notelist from './Notelist'
+import { Route } from 'react-router-dom';
+import Header from './Header'
 
 
-function App() {
+class App extends Component {
   state = {
-    store: STORE,
+    notes: [],
+    folders: [],
   }
 
-  return (
-    <main>
-      <h1>Noteful!</h1>
-    </main>
-  );
+  render(){
+   return (
+      <main>       
+          <Route 
+          path='/'
+          component={Header}
+          />
+          <Folderlist />
+          <Notelist />
+      </main>
+    ); 
+  }   
 }
+  
 
 export default App;

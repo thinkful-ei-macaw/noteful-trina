@@ -7,7 +7,46 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+h1 {
+  text-align: center;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.folders {
+  padding: 10px;
+  margin: 10PX;
+  list-style: none;
+  border: solid;
+}
+
+.folderlist {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  float: left;
+}
+
+.notelist {
+  display: flex;
+  list-style: none;
+  width: 400px;
+  padding-left: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.notes {
+  border: solid;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.notename, .notedate {
+  padding: 5px;
 }
